@@ -44,8 +44,9 @@
                 inParagraph = NO;
                 outputParagraph(output, paragraph);
             } else
-            if ([line hasPrefix: @"＝"] || [line hasPrefix: @"*"])
+            if ([line hasPrefix: @"＝"] || [line hasPrefix: @"*"] || [line hasPrefix: @"＊"])
             {
+                inParagraph = NO;
                 outputParagraph(output, paragraph);
                 outputLine(output, line);
             }
